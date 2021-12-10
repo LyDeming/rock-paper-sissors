@@ -1,9 +1,8 @@
 // rock paper scissors game //
 
-// function playerSelection() //
-const playerAnswer = prompt ("Rock, paper, or scissors? Choose wisely")
+let playerAnswer = prompt ("Rock, paper, or scissors? Choose wisely").toLowerCase();
 
-console.log (playerAnswer)
+console.log (playerAnswer);
 
 function computerSelection() {   
     const cSelection = ["rock", "paper", "scissors"]; 
@@ -12,25 +11,28 @@ function computerSelection() {
     }
 }   
 
-console.log (computerSelection())
+let computerAnswer = computerSelection();
 
-function playRound(playerAnswer, computerSelection) {
-    if playerAnswer === computerSelection {"Great minds hink alike"
-    }   else if (playerAnswer === "rock") && (computerSelection === "scissors") {
-        "You win! Rock smashes scissors";
-    }   else if (playerAnswer === "rock") && (computerSelection === "paper") {
-        "You lose! Paper smothers rock";
-    }   else if (playerAnswer === "paper") && (computerSelection === "scissors") {
-        "You lose! Scissors cuts paper";
-    }   else if (playerAnswer === "paper") && (computerSelection === "rock") {
-        "You win! Paper smothers rock";
-    }   else if (playerAnswer === "scissors") && (computerSelection === "paper") {
-        "You Win! Scissors cuts paper";
-    }   else (playerAnswer === "scissors") && (computerSelection === "rock") {
-        "You lose! Rock smashes scissors";
-    }
+console.log (computerAnswer);
+
+function playRound() {
+    if (playerAnswer === computerAnswer) {
+        return "Great minds think alike";
+    }  else if (playerAnswer === "rock" && computerAnswer === "scissors") {
+        return "You win! Rock smashes scissors";
+    }  else if (playerAnswer === "rock" && computerAnswer === "paper") {
+        return "You lose! Paper smothers rock";
+    }  else if (playerAnswer === "paper" && computerAnswer === "scissors") {
+        return "You lose! Scissors cuts paper";
+    }  else if (playerAnswer === "paper" && computerAnswer === "rock") {
+        return "You win! Paper smothers rock";
+    }  else if (playerAnswer === "scissors" && computerAnswer === "paper") {
+        return "You Win! Scissors cuts paper";
+    }  else (playerAnswer === "scissors" && computerAnswer === "rock") 
+        return "You lose! Rock smashes scissors"; 
 }
 
-console.log (playRound);
+console.log (playRound());
+
 // loop game 5x and keep score
  
