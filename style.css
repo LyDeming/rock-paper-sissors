@@ -1,3 +1,50 @@
 body {
     background-color: #bbb;
 }
+
+p {
+    font-size: 40px;
+}
+
+span {
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #141414;
+    padding: 3rem;
+}
+.main {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+
+#choices {
+    display: flex;
+    justify-self: center;
+    padding: 2rem;
+    margin: 3rem;
+}
+.rock {
+    color: #141414;
+    padding: 2rem;
+}
+
+.paper {
+    color: #141414;
+    padding: 2rem;
+}
+.scissors {
+    color: #141414;
+    padding: 2rem;
+}
