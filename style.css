@@ -2,12 +2,18 @@ body {
     background-color: #bbb;
 }
 
-p {
+h1 {
     font-size: 40px;
 }
 
-span {
+h2 {
     font-size: 20px;
+}
+
+button {
+    height: 2rem;
+    width: auto;
+    margin: 2rem;
 }
 
 .header {
@@ -29,22 +35,10 @@ span {
     
 }
 
-#choices {
+.choicesContainer {
     display: flex;
     justify-self: center;
     padding: 2rem;
     margin: 3rem;
 }
-.rock {
-    color: #141414;
-    padding: 2rem;
-}
 
-.paper {
-    color: #141414;
-    padding: 2rem;
-}
-.scissors {
-    color: #141414;
-    padding: 2rem;
-}

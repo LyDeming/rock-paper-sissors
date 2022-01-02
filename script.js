@@ -1,37 +1,58 @@
 // rock paper scissors game //
 const playerDisplay = document.getElementById('playerSelection');
-const computerDisplay = document.getElementById("computerSelction");
-const result = document.getElementById("result")
-const choices = document.querySelectorAll("button");
+const computerDisplay = document.getElementById('computerSelection');
+const resultDisplay = document.getElementById('result')
+const choices = document.querySelectorAll('.choices');
 let playerAnswer
-let randomChoice
+let computerChoice
+let result
 
 choices.forEach(choice => choice.addEventListener('click', (e) => {
-    playerAnswer = e.target.id
+    playerAnswer = e.target.id 
     playerDisplay.innerHTML = playerAnswer
     computerSelection()
+    playRound()
 }))
     
 function computerSelection() {
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-    computerDisplay.innerHTML = randomChoice
+    const randomNumber = Math.floor(Math.random() * 3) + 1;
+
+    if (randomNumber === 1) {
+        computerChoice = "rock"
+    }
+    if (randomNumber === 2) {
+        computerChoice = "paper"
+    }
+    if (randomNumber === 3) {
+        computerChoice = "scissors"
+    }
+
+    computerDisplay.innerHTML = computerChoice  
 }
 
-function playRound(playerAnswer, computerAnswer) {
-    if (playerAnswer === computerAnswer) {
-        return "Great minds think alike! It's a draw.";
-    } else if (playerAnswer === "rock" && computerAnswer === "scissors") {
-        return "You win! Rock smashes scissors.";
-    } else if (playerAnswer === "rock" && computerAnswer === "paper") {
-        return "You lose! Paper smothers rock.";
-    } else if (playerAnswer === "paper" && computerAnswer === "scissors") {
-        return "You lose! Scissors cuts paper.";
-    } else if (playerAnswer === "paper" && computerAnswer === "rock") {
-        return "You win! Paper smothers rock.";
-    } else if (playerAnswer === "scissors" && computerAnswer === "paper") {
-        return "You Win! Scissors cuts paper.";
-    } else (playerAnswer === "scissors" && computerAnswer === "rock")
-    return "You lose! Rock smashes scissors.";
+function playRound() {
+    if (playerAnswer === computerChoice) {
+        result = "Great minds think alike! It's a draw.";
+    }
+    if (playerAnswer === "rock" && computerChoice === "scissors") {
+        result = "You win! Rock smashes scissors.";
+    }
+    if (playerAnswer === "rock" && computerChoice === "paper") {
+        result = "You lose! Paper smothers rock.";
+    }
+    if (playerAnswer === "paper" && computerChoice=== "scissors") {
+        result = "You lose! Scissors cuts paper.";
+    }
+    if (playerAnswer === "paper" && computerChoice === "rock") {
+        result = "You win! Paper smothers rock.";
+    }
+    if (playerAnswer === "scissors" && computerChoice === "paper") {
+        result = "You Win! Scissors cuts paper.";
+    }
+    if (playerAnswer === "scissors" && computerChoice === "rock")
+    result = "You lose! Rock smashes scissors.";
+    
+    resultDisplay.innerHTML = result
 }
 
 /*let round = playRound(playerAnswer, computerAnswer)
@@ -44,7 +65,7 @@ function getScore(addScore) {
         case "You win! Paper smothers rock":
         //fall through//
         case "You Win! Scissors cuts paper":
-            return 1;
+            result = 1;
             break;
         case "You lose! Rock smashes scissors":
         //fall through//
@@ -53,7 +74,7 @@ function getScore(addScore) {
         case "You lose! Scissors cuts paper":
         //fall through//
         case "Great minds think alike":
-            return 0;
+            result = 0;
             break;
     }
 }

@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Sissors</title>
-    <script src="script.js"></script> 
+    <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script> 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/db5c6cc997.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main">
         <div class="header">
-            <p>Rock Paper Scissors</p>
-            <div id="playerSecletion">
-                <span>Player Selection: </span>
+            <h1>Rock Paper Scissors</h1>
+            <div>
+                <h2>Player Selection: <span id="playerSelection"></span></h2>
             </div>
-            <div id="computerSecletion">
-                <span>Computer Selection: </span>
+            <div>
+                <h2>Computer Selection: <span id="computerSelection"></span></h2>
             </div>
-            <div id="result">
-                <span>Win or Lose?: </span>
+            <div>
+                <h2>Win or Lose?: <span id="result"></span></h2>
             </div>
         </div>    
-        <div id="choices">
+        <div class="choicesContainer">
             <div class="rock">
-                <button id="rock"><i class="far fa-hand-rock fa-10x"></i></button> 
+                <button class="choices" id="rock">rock</button> 
             </div>
 
             <div class="paper">
-                <button id="paper"><i class="far fa-hand-paper fa-10x"></i></button>
+                <button class="choices" id="paper">paper</button>
             </div>
             
             <div class="scissors">
-                <button id="scissors"><i class="far fa-hand-scissors fa-10x"></i></button>
+                <button class="choices" id="scissors">scissors</button>
             </div>
         </div>    
     </div>
 </body>
+
